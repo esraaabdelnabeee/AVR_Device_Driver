@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>AtMega_Device_Driver</AssemblyName>
+    <Name>AtMega_Device_Driver</Name>
+    <RootNamespace>AtMega_Device_Driver</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BIT_MATH.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUUTON_DRIVER\INC\BUTTONs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUUTON_DRIVER\INC\BUTTONs_Type.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUUTON_DRIVER\INC\BUTTON_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUUTON_DRIVER\SRC\BUTTONs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUZZER_DRIVER\INC\BUZ.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUZZER_DRIVER\SRC\BUZ.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD_DRIVER\INC\KEYPAD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD_DRIVER\INC\KEYPAD_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD_DRIVER\INC\KEYPAD_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD_DRIVER\SRC\KEYPAD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD_DRIVER\INC\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD_DRIVER\INC\LCD_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD_DRIVER\INC\LCD_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD_DRIVER\SRC\LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED_DRIVER\INC\LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED_DRIVER\INC\LED_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED_DRIVER\SRC\LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\ADC_DRIVER\INC\ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\ADC_DRIVER\INC\ADC_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\ADC_DRIVER\INC\ADC_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\DIO_DRIVER\INC\DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\DIO_DRIVER\INC\DIO_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\DIO_DRIVER\INC\DIO_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\DIO_DRIVER\INC\DIO_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\DIO_DRIVER\SRC\DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EEPROM\INC\EEPROM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EEPROM\INC\EEPROM_reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EEPROM\INC\EEPROM_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EEPROM\SRC\EEPROM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EXTERNAL_INTERRUPT\INC\EX_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EXTERNAL_INTERRUPT\INC\EX_INTERRUPT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EXTERNAL_INTERRUPT\INC\EX_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EXTERNAL_INTERRUPT\INC\EX_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\EXTERNAL_INTERRUPT\SRC\EX_INTERRUPT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\GLOBAL_INTERRUPT\INC\GLOBAL_INTERRUPT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\GLOBAL_INTERRUPT\INC\GLOBAL_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\GLOBAL_INTERRUPT\SRC\GLOBAL_INTERRUPT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\I2C_DRIVER\INC\I2C.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\I2C_DRIVER\INC\I2C_Reg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\I2C_DRIVER\INC\I2C_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\I2C_DRIVER\SRC\I2C.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\ICU_DRIVER\INC\ICU.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\ICU_DRIVER\INC\ICU_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\ICU_DRIVER\INC\ICU_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\ICU_DRIVER\SRC\ICU.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\SPI_DRIVER\INC\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\SPI_DRIVER\INC\SPI_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\SPI_DRIVER\INC\SPI_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\SPI_DRIVER\SRC\SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\TIMER0_DRIVER\INC\TIMER0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\TIMER0_DRIVER\INC\TIMER0_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\TIMER0_DRIVER\INC\TIMER0_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\TIMER0_DRIVER\INC\TIMER0_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\TIMER0_DRIVER\SRC\TIMER0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\UART_DRIVER\INC\UART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\UART_DRIVER\INC\UART_REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Mcal\UART_DRIVER\SRC\UART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="STD_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HAL\BUUTON_DRIVER\INC" />
+    <Folder Include="HAL\BUUTON_DRIVER\SRC" />
+    <Folder Include="HAL\BUZZER_DRIVER\INC" />
+    <Folder Include="HAL\BUZZER_DRIVER\SRC" />
+    <Folder Include="HAL\KEYPAD_DRIVER\INC" />
+    <Folder Include="HAL\KEYPAD_DRIVER\SRC" />
+    <Folder Include="HAL\LCD_DRIVER\INC" />
+    <Folder Include="HAL\LCD_DRIVER\SRC" />
+    <Folder Include="HAL\LED_DRIVER" />
+    <Folder Include="HAL\LED_DRIVER\INC" />
+    <Folder Include="HAL\LED_DRIVER\SRC" />
+    <Folder Include="HAL\KEYPAD_DRIVER" />
+    <Folder Include="HAL\BUZZER_DRIVER" />
+    <Folder Include="HAL\BUUTON_DRIVER" />
+    <Folder Include="HAL\LCD_DRIVER" />
+    <Folder Include="Mcal" />
+    <Folder Include="HAL" />
+    <Folder Include="Mcal\ADC_DRIVER\INC" />
+    <Folder Include="Mcal\ADC_DRIVER\SRC" />
+    <Folder Include="Mcal\DIO_DRIVER" />
+    <Folder Include="Mcal\DIO_DRIVER\INC" />
+    <Folder Include="Mcal\DIO_DRIVER\SRC" />
+    <Folder Include="Mcal\ADC_DRIVER" />
+    <Folder Include="Mcal\EEPROM" />
+    <Folder Include="Mcal\EEPROM\INC" />
+    <Folder Include="Mcal\EEPROM\SRC" />
+    <Folder Include="Mcal\EXTERNAL_INTERRUPT\INC" />
+    <Folder Include="Mcal\EXTERNAL_INTERRUPT\SRC" />
+    <Folder Include="Mcal\GLOBAL_INTERRUPT" />
+    <Folder Include="Mcal\GLOBAL_INTERRUPT\INC" />
+    <Folder Include="Mcal\GLOBAL_INTERRUPT\SRC" />
+    <Folder Include="Mcal\EXTERNAL_INTERRUPT" />
+    <Folder Include="Mcal\I2C_DRIVER" />
+    <Folder Include="Mcal\I2C_DRIVER\INC" />
+    <Folder Include="Mcal\I2C_DRIVER\SRC" />
+    <Folder Include="Mcal\ICU_DRIVER" />
+    <Folder Include="Mcal\ICU_DRIVER\INC" />
+    <Folder Include="Mcal\ICU_DRIVER\SRC" />
+    <Folder Include="Mcal\SPI_DRIVER" />
+    <Folder Include="Mcal\SPI_DRIVER\INC" />
+    <Folder Include="Mcal\SPI_DRIVER\SRC" />
+    <Folder Include="Mcal\UART_DRIVER" />
+    <Folder Include="Mcal\TIMER0_DRIVER" />
+    <Folder Include="Mcal\TIMER0_DRIVER\INC" />
+    <Folder Include="Mcal\TIMER0_DRIVER\SRC" />
+    <Folder Include="Mcal\UART_DRIVER\INC" />
+    <Folder Include="Mcal\UART_DRIVER\SRC" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
